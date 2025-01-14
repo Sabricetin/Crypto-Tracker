@@ -19,6 +19,7 @@
 		1E6BB99D2D35A18D00DCB4FF /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6BB99C2D35A18D00DCB4FF /* CoinRowView.swift */; };
 		1E6BB99F2D35A21100DCB4FF /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6BB99E2D35A21100DCB4FF /* PreviewProvider.swift */; };
 		1E6BB9A12D35AA5500DCB4FF /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6BB9A02D35AA5500DCB4FF /* Double.swift */; };
+		1EEC2B252D3639480029FCB8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEC2B242D3639480029FCB8 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		1E6BB99C2D35A18D00DCB4FF /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
 		1E6BB99E2D35A21100DCB4FF /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		1E6BB9A02D35AA5500DCB4FF /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		1EEC2B242D3639480029FCB8 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 		1E6BB9902D352FB200DCB4FF /* ViewsModel */ = {
 			isa = PBXGroup;
 			children = (
+				1EEC2B242D3639480029FCB8 /* HomeViewModel.swift */,
 			);
 			path = ViewsModel;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E6BB99D2D35A18D00DCB4FF /* CoinRowView.swift in Sources */,
+				1EEC2B252D3639480029FCB8 /* HomeViewModel.swift in Sources */,
 				1E6BB9982D353A6A00DCB4FF /* CirculeButtonAnimationView.swift in Sources */,
 				1E6BB9962D3531A700DCB4FF /* CirculeButtonView.swift in Sources */,
 				1E6BB97D2D35092400DCB4FF /* ContentView.swift in Sources */,
