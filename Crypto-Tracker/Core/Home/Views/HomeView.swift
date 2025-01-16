@@ -22,6 +22,7 @@ struct HomeView: View {
             //İçerik Katmanı
             VStack {
                 homeHeader
+                homeStatesView(showPortfolio: $showPortfilo)
                 
                 SearchBarView(searchText: $vm.searchText)
                 
