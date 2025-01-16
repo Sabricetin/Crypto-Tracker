@@ -21,7 +21,10 @@ struct HomeView: View {
             
             //İçerik Katmanı
             VStack {
-               homeHeader
+                homeHeader
+                
+                SearchBarView(searchText: $vm.searchText)
+                
                 columnTitles
                 
                 if !showPortfilo {
