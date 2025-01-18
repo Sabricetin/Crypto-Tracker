@@ -11,6 +11,7 @@ struct HomeView: View {
     
     @EnvironmentObject private var vm : HomeViewModel
     @State private var showPortfilo : Bool = false
+    @State private var showPortfolioView: Bool = false
     
     
     var body: some View {
@@ -68,6 +69,11 @@ extension HomeView {
         HStack {
             CirculeButtonView(iconName: showPortfilo ? "plus" : "info")
                 .animation(.none)
+                .onTapGesture {
+                    if showPortfilo {
+                        
+                    }
+                }
                 .background(
                     CirculeButtonAnimationView(animate: $showPortfilo)
                 )

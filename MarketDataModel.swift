@@ -202,7 +202,7 @@ struct MarketDataModel: Codable {
     }
     var btcDominance : String {
         if let item = marketCapPercentage.first(where: { $0.key == "btc" }) {
-            return String(format: "%.2f%%", item.value) 
+            return String(format: "%.2f%%", item.value)
             //return item.value.asNumberString()
         }
         return ""
