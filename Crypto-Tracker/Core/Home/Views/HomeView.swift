@@ -14,6 +14,10 @@ struct HomeView: View {
     @State private var showPortfolioView: Bool = false
     
     
+    
+    
+    
+    
     var body: some View {
         ZStack {
             // Arka Plan Katmanı
