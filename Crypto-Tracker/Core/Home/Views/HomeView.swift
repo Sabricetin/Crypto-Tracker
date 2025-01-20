@@ -10,12 +10,8 @@ import SwiftUI
 struct HomeView: View {
     
     @EnvironmentObject private var vm : HomeViewModel
-    @State private var showPortfilo : Bool = false
-    @State private var showPortfolioView: Bool = false
-    
-    
-    
-    
+    @State private var showPortfilo : Bool = false // animate right
+    @State private var showPortfolioView: Bool = false // new sheet
     
     
     var body: some View {
@@ -23,6 +19,10 @@ struct HomeView: View {
             // Arka Plan Katmanı
             Color.theme.background
                 .ignoresSafeArea()
+                .sheet (isPresented : $showPortfolioView , content:  {
+                    PortfolioView()
+                        .environmentObject(vm)
+                })
             
             //İçerik Katmanı
             VStack {
@@ -75,6 +75,7 @@ extension HomeView {
                 .animation(.none)
                 .onTapGesture {
                     if showPortfilo {
+                        showPortfolioView.toggle()
                         
                     }
                 }

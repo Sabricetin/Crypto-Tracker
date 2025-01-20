@@ -9,7 +9,7 @@ import SwiftUI
 
 struct XmarkButton: View {
     
-    @Environment(\.dismiss) var dismiss
+    @Environment(\.dismiss) var dismiss // Dismiss Environment
      
     var body: some View {
         Button(action: {
@@ -21,7 +21,8 @@ struct XmarkButton: View {
     }
     
 }
-
-#Preview {
-    XmarkButton()
+struct XmarkButton_Previews : PreviewProvider {
+    static var previews: some View {
+        XmarkButton()
+    }
 }
