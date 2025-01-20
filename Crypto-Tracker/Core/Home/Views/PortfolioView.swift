@@ -12,7 +12,7 @@ struct PortfolioView: View {
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject private var vm: HomeViewModel
     @State private var selectedCoin : CoinModel? = nil
-    @State private var quanttyText: String = ""
+    @State private var quantityText: String = ""
     @State private var showCheckmark : Bool = false
 
     var body: some View {
@@ -65,13 +65,13 @@ extension PortfolioView {
         
         ScrollView(.horizontal , showsIndicators: false , content: {
             LazyHStack (spacing: 10) {
-                ForEach(vm.allCoins) { coin in
+                ForEach(vm.searchText.isEmpty ? vm.portfolioCoins : vm.allCoins) { coin in
                     CoinLogoView(coin: coin)
                         .frame(width: 75)
                         .padding(4)
                         .onTapGesture {
                             withAnimation(.easeIn) {
-                                selectedCoin = coin
+                               updateSelectedCoin(coin: coin)
                             }
                         }
                         .background(
@@ -86,8 +86,21 @@ extension PortfolioView {
         } )
     }
     
+    private func updateSelectedCoin(coin: CoinModel) {
+        
+        selectedCoin = coin
+        
+        if let portfolioCoin = vm.portfolioCoins .first (where: { $0.id == coin.id }) ,
+           let amount = portfolioCoin.currentHoldings {
+            quantityText = "\(amount)"
+        } else {
+            quantityText = ""
+        }
+        
+    }
+    
     private func getCurrentValue() -> Double {
-        if let quantity = Double(quanttyText) {
+        if let quantity = Double(quantityText) {
             return quantity * (selectedCoin?.currentPrice ?? 0)
         }
         return 0
@@ -104,7 +117,7 @@ extension PortfolioView {
             HStack {
                 Text("Amonut holding:")
                 Spacer()
-                TextField("Ex: 1.4" , text: $quanttyText)
+                TextField("Ex: 1.4" , text: $quantityText)
                     .multilineTextAlignment(.trailing)
                     .keyboardType(.decimalPad)
                 
@@ -134,16 +147,21 @@ extension PortfolioView {
                 Text("save".uppercased())
             })
             .opacity(
-                (selectedCoin != nil && selectedCoin?.currentHoldings != Double(quanttyText)) ? 1.0 :0.0
+                (selectedCoin != nil && selectedCoin?.currentHoldings != Double(quantityText)) ? 1.0 :0.0
             )
             
         }
         .font(.headline)
     }
     private func saveButtonPressed() {
-        guard let coin = selectedCoin else { return }
+        guard
+        let coin = selectedCoin ,
+        let amount = Double(quantityText)
+        else { return }
         
         //save to portfolio
+        
+        vm.updatePortfolio(coin: coin, amount: amount)
         
         //show checkmark
         withAnimation(.easeIn) {
