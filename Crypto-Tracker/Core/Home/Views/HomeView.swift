@@ -107,6 +107,9 @@ extension HomeView {
             }
         }
         .listStyle(PlainListStyle())
+        .refreshable {
+            vm.reloadData() 
+        }
     }
     private var portfolioCoinlist : some View {
         List {
@@ -128,6 +131,8 @@ extension HomeView {
            
             Text("Price")
                 .frame(width: UIScreen.main.bounds.width /  3.5 , alignment: .trailing)
+            
+               
         }
         .font(.caption)
         .foregroundColor(Color.theme.secondaryText)
