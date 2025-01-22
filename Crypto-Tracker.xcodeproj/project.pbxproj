@@ -24,6 +24,7 @@
 		1E6B38612D3EDCDB002709CA /* PortfolioContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B385F2D3EDCDB002709CA /* PortfolioContainer.xcdatamodeld */; };
 		1E6B38632D3EDD6C002709CA /* PortfolioDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B38622D3EDD6C002709CA /* PortfolioDataService.swift */; };
 		1E6B38652D3FBE12002709CA /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B38642D3FBE12002709CA /* HapticManager.swift */; };
+		1E6B386A2D412707002709CA /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B38692D412707002709CA /* DetailView.swift */; };
 		1E6BB97B2D35092400DCB4FF /* Crypto_TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6BB97A2D35092400DCB4FF /* Crypto_TrackerApp.swift */; };
 		1E6BB97D2D35092400DCB4FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6BB97C2D35092400DCB4FF /* ContentView.swift */; };
 		1E6BB9822D35092500DCB4FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E6BB9812D35092500DCB4FF /* Preview Assets.xcassets */; };
@@ -59,6 +60,7 @@
 		1E6B38602D3EDCDB002709CA /* PortfolioContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PortfolioContainer.xcdatamodel; sourceTree = "<group>"; };
 		1E6B38622D3EDD6C002709CA /* PortfolioDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDataService.swift; sourceTree = "<group>"; };
 		1E6B38642D3FBE12002709CA /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
+		1E6B38692D412707002709CA /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		1E6BB9772D35092400DCB4FF /* Crypto-Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crypto-Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E6BB97A2D35092400DCB4FF /* Crypto_TrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto_TrackerApp.swift; sourceTree = "<group>"; };
 		1E6BB97C2D35092400DCB4FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +98,30 @@
 				1E6B385D2D3E3426002709CA /* CoinLogoView.swift */,
 			);
 			path = CoinImage;
+			sourceTree = "<group>";
+		};
+		1E6B38662D41268A002709CA /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				1E6B38682D4126DD002709CA /* ViewsModel */,
+				1E6B38672D4126C6002709CA /* Views */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		1E6B38672D4126C6002709CA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1E6B38692D412707002709CA /* DetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1E6B38682D4126DD002709CA /* ViewsModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewsModel;
 			sourceTree = "<group>";
 		};
 		1E6BB96E2D35092300DCB4FF = {
@@ -154,6 +180,7 @@
 			children = (
 				1E6BB9932D35315C00DCB4FF /* Components */,
 				1E6BB98E2D352F9F00DCB4FF /* Home */,
+				1E6B38662D41268A002709CA /* Detail */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -325,6 +352,7 @@
 				1E6B38542D39B3F8002709CA /* homeStatesView.swift in Sources */,
 				1E6BB9922D352FD500DCB4FF /* HomeView.swift in Sources */,
 				1E6BB97B2D35092400DCB4FF /* Crypto_TrackerApp.swift in Sources */,
+				1E6B386A2D412707002709CA /* DetailView.swift in Sources */,
 				1E6B38652D3FBE12002709CA /* HapticManager.swift in Sources */,
 				1E6B384C2D39225A002709CA /* SearchBarView.swift in Sources */,
 				1EEC2B2B2D36C72F0029FCB8 /* NetworkingManager.swift in Sources */,
