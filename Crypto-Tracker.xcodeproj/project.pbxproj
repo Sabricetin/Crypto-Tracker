@@ -29,7 +29,6 @@
 		1E6B386E2D4421C0002709CA /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B386D2D4421C0002709CA /* DetailViewModel.swift */; };
 		1E6B38702D442211002709CA /* CoinDetailDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B386F2D442211002709CA /* CoinDetailDataService.swift */; };
 		1E6BB97B2D35092400DCB4FF /* Crypto_TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6BB97A2D35092400DCB4FF /* Crypto_TrackerApp.swift */; };
-		1E6BB97D2D35092400DCB4FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6BB97C2D35092400DCB4FF /* ContentView.swift */; };
 		1E6BB9822D35092500DCB4FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E6BB9812D35092500DCB4FF /* Preview Assets.xcassets */; };
 		1E6BB9892D35278200DCB4FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E6BB9882D35278200DCB4FF /* Assets.xcassets */; };
 		1E6BB98C2D3527D200DCB4FF /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6BB98B2D3527D200DCB4FF /* Color.swift */; };
@@ -75,7 +74,6 @@
 		1E6B386F2D442211002709CA /* CoinDetailDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailDataService.swift; sourceTree = "<group>"; };
 		1E6BB9772D35092400DCB4FF /* Crypto-Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crypto-Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E6BB97A2D35092400DCB4FF /* Crypto_TrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto_TrackerApp.swift; sourceTree = "<group>"; };
-		1E6BB97C2D35092400DCB4FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1E6BB9812D35092500DCB4FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1E6BB9882D35278200DCB4FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Resources/Assets.xcassets; sourceTree = "<group>"; };
 		1E6BB98B2D3527D200DCB4FF /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -169,7 +167,6 @@
 				1E6BB9992D3559AF00DCB4FF /* Models */,
 				1E6BB98D2D352F8900DCB4FF /* Core */,
 				1E6BB97A2D35092400DCB4FF /* Crypto_TrackerApp.swift */,
-				1E6BB97C2D35092400DCB4FF /* ContentView.swift */,
 				1E6BB9882D35278200DCB4FF /* Assets.xcassets */,
 				1E6BB9802D35092500DCB4FF /* Preview Content */,
 			);
@@ -409,7 +406,6 @@
 				1E6BB9962D3531A700DCB4FF /* CirculeButtonView.swift in Sources */,
 				1E6B38522D39ACA4002709CA /* StatisticView.swift in Sources */,
 				1E59DA1C2D3824E200592705 /* CoinImageView.swift in Sources */,
-				1E6BB97D2D35092400DCB4FF /* ContentView.swift in Sources */,
 				1E6B384E2D392B9A002709CA /* UIApplication.swift in Sources */,
 				1E6B38542D39B3F8002709CA /* homeStatesView.swift in Sources */,
 				1EB1079D2D4B698200F6AA1E /* LaunchView.swift in Sources */,
@@ -574,6 +570,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -603,6 +600,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
