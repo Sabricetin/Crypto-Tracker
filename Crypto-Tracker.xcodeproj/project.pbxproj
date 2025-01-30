@@ -44,6 +44,8 @@
 		1E7BD6822D49591700977669 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7BD6812D49591700977669 /* Date.swift */; };
 		1E7BD6842D49724600977669 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7BD6832D49724600977669 /* String.swift */; };
 		1EB107962D4AC6D000F6AA1E /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB107952D4AC6D000F6AA1E /* Settings.swift */; };
+		1EB1079B2D4B67D400F6AA1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EB1079A2D4B67D400F6AA1E /* LaunchScreen.storyboard */; };
+		1EB1079D2D4B698200F6AA1E /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB1079C2D4B698200F6AA1E /* LaunchView.swift */; };
 		1EEC2B252D3639480029FCB8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEC2B242D3639480029FCB8 /* HomeViewModel.swift */; };
 		1EEC2B282D3649750029FCB8 /* CoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEC2B272D3649750029FCB8 /* CoinDataService.swift */; };
 		1EEC2B2B2D36C72F0029FCB8 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEC2B2A2D36C72F0029FCB8 /* NetworkingManager.swift */; };
@@ -88,6 +90,8 @@
 		1E7BD6812D49591700977669 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		1E7BD6832D49724600977669 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		1EB107952D4AC6D000F6AA1E /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		1EB1079A2D4B67D400F6AA1E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1EB1079C2D4B698200F6AA1E /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		1EEC2B242D3639480029FCB8 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		1EEC2B272D3649750029FCB8 /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
 		1EEC2B2A2D36C72F0029FCB8 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
@@ -196,6 +200,7 @@
 		1E6BB98D2D352F8900DCB4FF /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				1EB107982D4B67AC00F6AA1E /* Launch */,
 				1EB107942D4AC6B900F6AA1E /* Settings */,
 				1E6BB9932D35315C00DCB4FF /* Components */,
 				1E6BB98E2D352F9F00DCB4FF /* Home */,
@@ -281,6 +286,23 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		1EB107982D4B67AC00F6AA1E /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				1EB107992D4B67BB00F6AA1E /* Views */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		1EB107992D4B67BB00F6AA1E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1EB1079A2D4B67D400F6AA1E /* LaunchScreen.storyboard */,
+				1EB1079C2D4B698200F6AA1E /* LaunchView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		1EEC2B262D36493D0029FCB8 /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -361,6 +383,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EB1079B2D4B67D400F6AA1E /* LaunchScreen.storyboard in Resources */,
 				1E6BB9822D35092500DCB4FF /* Preview Assets.xcassets in Resources */,
 				1E6BB9892D35278200DCB4FF /* Assets.xcassets in Resources */,
 			);
@@ -389,6 +412,7 @@
 				1E6BB97D2D35092400DCB4FF /* ContentView.swift in Sources */,
 				1E6B384E2D392B9A002709CA /* UIApplication.swift in Sources */,
 				1E6B38542D39B3F8002709CA /* homeStatesView.swift in Sources */,
+				1EB1079D2D4B698200F6AA1E /* LaunchView.swift in Sources */,
 				1E6BB9922D352FD500DCB4FF /* HomeView.swift in Sources */,
 				1E6BB97B2D35092400DCB4FF /* Crypto_TrackerApp.swift in Sources */,
 				1EB107962D4AC6D000F6AA1E /* Settings.swift in Sources */,
@@ -549,7 +573,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -578,7 +602,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
