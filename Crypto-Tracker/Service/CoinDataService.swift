@@ -20,8 +20,19 @@ class CoinDataService {
     
      func getCoins () {
         
-        guard let url = URL(string: "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=true&price_change_percentage=24h" )
-        else {return}
+         //Environment variable'den BASE_RL ve API_KEY al
+         
+         guard let baseURL = ProcessInfo.processInfo.environment["BASE_URL"] else {
+             print("BASE_URL Bulunamadı")
+             return
+         }
+         
+         //EĞER API key eklenirse buraya eklenebilir
+         let apikey = ProcessInfo.processInfo.environment["API_KEY"] ?? ""
+         let finalURL = apikey.isEmpty ? baseURL : "\(baseURL)?api_key=\(apikey)"
+         
+         guard let url = URL(string: finalURL) else {return}
+         
         
         coinsSubscription = NetworkingManager.download(url: url)
             .decode(type: [CoinModel].self, decoder: JSONDecoder())

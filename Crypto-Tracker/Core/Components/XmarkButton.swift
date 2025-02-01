@@ -10,13 +10,17 @@ import SwiftUI
 struct XmarkButton: View {
     
     @Environment(\.dismiss) var dismiss // Dismiss Environment
-     
+    
+    var color: Color = .primary
+    
     var body: some View {
         Button(action: {
             dismiss()
     }, label: {
         Image(systemName: "xmark")
             .font(.headline)
+            .foregroundColor(color)
+        
     })
     }
     

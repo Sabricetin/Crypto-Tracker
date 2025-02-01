@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Settings: View {
     
+    @Environment(\.dismiss) var dismiss
     let defaultURL = URL(string: "https://www.google.com")!
     let github = URL(string: "https://github.com/Sabricetin")!
     let linkedin = URL(string: "https://www.linkedin.com/in/sabricetin/")!
@@ -19,19 +20,29 @@ struct Settings: View {
     
     var body: some View {
         NavigationView {
-            List {
-                swiftfulThinkingSection
-                coinGeckoSection
-                developerSection
-                applicationSection
-            }
+                // Content Layer
+                List {
+                    swiftfulThinkingSection
+                        .listRowBackground( Color.theme.background.opacity(0.5))
+                    coinGeckoSection
+                        .listRowBackground( Color.theme.background.opacity(0.5))
+                    developerSection
+                        .listRowBackground( Color.theme.background.opacity(0.5))
+                    applicationSection
+                        .listRowBackground( Color.theme.background.opacity(0.5))
+                }
+                
+//                .scrollContentBackground(.hidden)
+//                .background(Color.theme.background)
+            
+           
             .accentColor(.blue)
             .font(.headline)
             .listStyle(InsetGroupedListStyle())
             .navigationTitle("Settings")
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    XmarkButton()
+                    XmarkButton(dismiss: _dismiss)
                 }
             }
         }
@@ -108,8 +119,10 @@ extension Settings {
             
             .padding(.vertical)
             Button(action: {
-                if let emailURL = URL(string: "mailto:\(gmail)") {
+                if let emailURL = URL(string: "mailto:\(gmail)"), UIApplication.shared.canOpenURL(emailURL) {
                     UIApplication.shared.open(emailURL, options: [:], completionHandler: nil)
+                } else {
+                    print("📧 Email uygulaması açılamıyor!")
                 }
             }) {
                 Text("Contact via Email")
