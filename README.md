@@ -5,9 +5,9 @@ Crypto Tracker, SwiftUI ve MVVM mimarisi kullanılarak geliştirilmiş bir kript
 📌 Özellikler
 
 🔹 Gerçek Zamanlı Kripto Para Takibi
-	•	Piyasadaki en popüler kripto para birimlerinin anlık fiyat bilgilerini gösterir.
-	•	USD ve diğer para birimleri üzerinden fiyatlandırma desteği sunar.
-	•	Combine Framework ile veriler anlık olarak güncellenir.
+	-	Piyasadaki en popüler kripto para birimlerinin anlık fiyat bilgilerini gösterir.
+	-	USD ve diğer para birimleri üzerinden fiyatlandırma desteği sunar.
+	-	Combine Framework ile veriler anlık olarak güncellenir.
 
 🎨 Özel Tema Desteği
 	•	Uygulamada iki ana tema bulunmaktadır:
